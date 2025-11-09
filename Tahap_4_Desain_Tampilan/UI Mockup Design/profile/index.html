@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DineNow - User Profile</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="#">
+                <span class="text-dark me-2">Welcome to</span>DineNow
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-house-door me-1"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope me-1"></i>Contact Us</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #f49b33;"><i
+                                class="bi bi-box-arrow-right me-1" style="color: #f49b33;"></i>Sign Out</a></li>
+                </ul>
+                <div class="ms-3 d-flex align-items-center">
+                    <img src="img/profile-dummy.jpeg" class=" profile me-2" alt="profile" />
+                    <span>Bob Smith</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Profile Section -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm p-4">
+                    <h5 class="mb-3 border-bottom pb-2"><i class="bi bi-person-circle me-2"></i>My Profile</h5>
+                    <div class="text-center mb-3">
+                        <img class="profile2" src="img/profile-dummy.jpeg" class="rounded-circle border" alt="Profile" />
+                    </div>
+
+                    <form id="profileForm">
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi bi-envelope-fill me-1"></i>Email Address</label>
+                            <input type="email" class="form-control" id="email" value="bobsmith248@gmail.com"
+                                readonly />
+                        </div>
+
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi bi-person-fill me-1"></i>Full Name</label>
+                            <input type="text" class="form-control" id="fullname" value="Bob Smith" />
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="mb-3">
+                            <label class="form-label"><i class="bi bi-telephone-fill me-1"></i>Mobile Number</label>
+                            <div class="input-group">
+                                <select class="form-select" id="countryCode">
+                                    <option value="+1" selected>🇺🇸 +1</option>
+                                    <option value="+62">🇮🇩 +62</option>
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                </select>
+                                <input type="tel" class="form-control" id="phone" value="653852163" />
+                            </div>
+                        </div>
+
+                        <!-- OTP -->
+                        <div class="mb-3 text-center">
+                            <button type="button" class="btn btn-dark w-100" id="getOtpBtn">
+                                <i class="bi bi-shield-lock-fill me-1"></i>Get One Time Password
+                            </button>
+                        </div>
+
+                        <!-- OTP Input Section -->
+                        <div id="otpSection" class="d-none">
+                            <div class="d-flex justify-content-center gap-2 mb-2">
+                                <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                                <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                                <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                                <input type="text" maxlength="1" class="form-control text-center otp-input" />
+                            </div>
+                            <p class="text-muted text-center small">
+                                Resend One Time Password in <span id="countdown">15</span>s
+                            </p>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <button type="button" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left me-1"></i>Go Back
+                            </button>
+                            <button type="submit" class="btn btn-dark">
+                                <i class="bi bi-save2 me-1"></i>Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking History Section -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm p-4">
+                    <h5 class="mb-3 border-bottom pb-2"><i class="bi bi-clock-history me-2"></i>History and Recent
+                        Bookings</h5>
+
+                    <div class="booking-item d-flex mb-3">
+                        <img src="img/1.jpeg" class="rounded me-3" alt="booking" />
+                        <div>
+                            <h6 class="mb-1">Sea Grill of Merrick Park <span class="text-success">(Reserved)</span></h6>
+                            <small class="text-muted"><i class="bi bi-calendar-event me-1"></i>17 Dec 2022 | 12:15 PM -
+                                2 Guests</small>
+                        </div>
+                    </div>
+
+                    <div class="booking-item d-flex mb-3">
+                        <img src="img/2.jpeg" class="rounded me-3" alt="booking" />
+                        <div>
+                            <h6 class="mb-1">Sea Grill North Miami Beach <span class="text-danger">(Cancelled)</span>
+                            </h6>
+                            <small class="text-muted"><i class="bi bi-calendar-event me-1"></i>17 Dec 2022 | 12:15 PM -
+                                2 Guests</small>
+                        </div>
+                    </div>
+
+                    <div class="booking-item d-flex mb-3">
+                        <img src="img/3.jpeg" class="rounded me-3" alt="booking" />
+                        <div>
+                            <h6 class="mb-1">Villagio Restaurant and Bar <span class="text-danger">(Cancelled)</span>
+                            </h6>
+                            <small class="text-muted"><i class="bi bi-calendar-event me-1"></i>17 Dec 2022 | 12:15 PM -
+                                2 Guests</small>
+                        </div>
+                    </div>
+
+                    <div class="booking-item d-flex">
+                        <img src="img/4.jpeg" class="rounded me-3" alt="booking" />
+                        <div>
+                            <h6 class="mb-1">Villagio Restaurant and Bar <span class="text-danger">(Cancelled)</span>
+                            </h6>
+                            <small class="text-muted"><i class="bi bi-calendar-event me-1"></i>17 Dec 2022 | 12:15 PM -
+                                2 Guests</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-5 mt-5 text-light">
+        <h5 style="color: #f49b33;" class="mb-2"><i class="bi bi-star-fill me-2"></i>REGISTER FOR FREE</h5>
+        <p>Register with us and win amazing discount points on reservations</p>
+        <button class="btn btn-warning fw-bold"><i class="bi bi-pencil-square me-1"></i>Register</button>
+        <div class="footer-links mb-3">
+            <a href="#" class="text-light text-decoration-none mx-2">Service</a> |
+            <a href="#" class="text-light text-decoration-none mx-2">About Us</a> |
+            <a href="#" class="text-light text-decoration-none mx-2">Contact Us</a> |
+            <a href="#" class="text-light text-decoration-none mx-2">FAQs</a> |
+            <a href="#" class="text-light text-decoration-none mx-2">Sign In</a>
+        </div>
+        <div class="socials my-3 mx-2">
+            <a href="https://www.instagram.com/.."><span class="ico-circle"><i
+                        class="bi bi-facebook"></i></span></a>
+            <a href="https://www.instagram.com/.."><span class="ico-circle"><i
+                        class="bi bi-twitter"></i></span></a>
+            <a href="https://www.instagram.com/.."><span class="ico-circle"><i
+                        class="bi bi-instagram"></i></span></a>
+        </div>
+        </div>
+        <hr class="bg-light w-25 mx-auto my-4" />
+        <p class="mb-0 small">&copy; 2025 DineNow. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

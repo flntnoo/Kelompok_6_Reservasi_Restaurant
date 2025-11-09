@@ -1,0 +1,85 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  footer h5 {
+    font-weight: 700;
+  }
+  
+  footer button {
+    font-weight: bold;
+  }
+  
+  .ico-circle {
+      color: #f49b33;
+      font-size: 2em;
+      margin-left: 10px;   
+      margin-right: 10px;   
+  }
+  
+  .register {
+      color: #f49b33;
+  }
+
+  .profile {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .profile2 {
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  footer {
+    background-image: url("img/footer.jpg"); /* ganti dengan path gambarmu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+  }
+  
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* lapisan gelap agar teks tetap terbaca */
+    z-index: 0;
+  }
+  
+  footer * {
+    position: relative;
+    z-index: 1; /* pastikan konten footer di atas layer gelap */
+  }
+  
+  .footer-links {
+      margin-top: 10px;
+  }
+  
+  .footer-links a:hover {
+    color: #f49b33;
+  }
+  
+  .booking-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  input[readonly] {
+    background-color: #f0f0f0;
+  }
