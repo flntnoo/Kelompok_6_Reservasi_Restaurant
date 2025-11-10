@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DineNow - Restaurant Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.5.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Welcome to <span>DineNow</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Contact us</a>
+      <a href="#" class="signout">Sign Out</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="restaurant-card">
+      <!-- Go Back -->
+      <a href="#" class="back-btn">← Go Back</a>
+
+      <img src="makanan.png" 
+           alt="Restaurant Image" class="main-img" />
+
+      <div class="info">
+        <h2><span class="highlight">Villagio</span> Restaurant & Bar</h2>
+
+        <div class="details">
+          <i class="fi fi-rs-marker"></i>
+          <p> 360 San Lorenzo Avenue, Suite 1430 Coral Gables, FL 33146-1865 | 
+            <a href="https://maps.google.com/?q=Villagio+Restaurant+Coral+Gables" target="_blank" class="map-link">Get Direction</a>
+          </p>
+          <p>🕒 10:30 AM - 11:00 PM | 
+             <a href="#" id="fakeMenu">Show Menu</a>
+        </div>
+
+        <p>
+          Villagio Restaurant & Bar offers a fine Italian dining experience with fresh seafood and handcrafted pasta. 
+          Enjoy an elegant ambiance perfect for dinner with friends or family. 
+        </p>
+
+        <!-- BOOKING INPUTS -->
+        <div class="booking">
+          <div class="input-group">
+            <label>Date</label>
+            <input type="date" />
+          </div>
+           <div class="input-group">
+            <label>People</label>
+            <input type="number" min="1" max="10" value="2" />
+          </div>
+          <div class="input-group">
+            <label>In / Out</label>
+            <select>
+              <option>In</option>
+              <option>Out</option>
+            </select>
+          </div>
+          <button id="findSlots">Find Slots</button>
+        </div>
+
+        <!-- TIME SLOTS -->
+        <div class="slots-section">
+          <h3>Available Time Slots</h3>
+          <div class="slots">
+            <button class="slot">10:30 AM</button>
+            <button class="slot">10:45 PM</button>
+            <button class="slot">11:30 AM</button>
+            <button class="slot">11:45 AM</button>
+            <button class="slot">12:00 PM</button>
+            <button class="slot">01:30 PM</button>
+            <button class="slot">02:30 PM</button>
+            <button class="slot">02:45 PM</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="promo">
+        Automatically save <strong>2% on your bill</strong> if you reserve your Table With 
+        <span style="color:#f29c1f;">DINE IN JAKARTA</span>
+      </div>
+
+      <!-- MAP SECTION -->
+      <div class="map">
+        <h3>Here to Find</h3>
+        <a href="https://www.google.com/maps/place/Jakarta/" target="_blank">
+          <img src="map.png" alt="Map Jakarta" />
+        </a>
+      </div>
+
+      <div class="websites">
+        <h3>Official Websites</h3>
+        <ul>
+          <li><a href="https://villagiorestaurantmiami.com/" target="_blank">Villagio Restaurant & Bar</a></li>
+          <li><a href="https://seagrillmiami.com/" target="_blank">Seagrill Miami Restaurants</a></li>
+          <li><a href="https://carpaccioamericandream.com/" target="_blank">Carpaccio American Dream</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
